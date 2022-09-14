@@ -3,7 +3,7 @@
 VERSION=$(grep 'Kernel Configuration' < /boot/config-"$(uname -r)" | awk '{print $3}')
 
 # add deb-src to sources.list
-echo "deb-src https://home-packages.chinauos.com/home plum main contrib non-free" >> /etc/apt/sources.list
+echo "deb https://community-packages.deepin.com/deepin/ apricot main contrib non-free" >> /etc/apt/sources.list
 
 # install dep
 sudo apt update
