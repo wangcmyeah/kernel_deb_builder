@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-VERSION=$(grep 'Kernel Configuration' < config | awk '{print $3}')
+# VERSION=$(grep 'Kernel Configuration' < config | awk '{print $3}')
+VERSION='5.19.11'
+
 
 # add deb-src to sources.list
 sed -i "/deb-src/s/# //g" /etc/apt/sources.list
