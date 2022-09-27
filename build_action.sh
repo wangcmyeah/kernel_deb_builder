@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # VERSION=$(grep 'Kernel Configuration' < config | awk '{print $3}')
-VERSION='5.19.11'
+VERSION='6.0-rc7'
 
 
 # add deb-src to sources.list
