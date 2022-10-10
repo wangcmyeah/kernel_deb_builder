@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 VERSION=$(grep 'Kernel Configuration' < config | awk '{print $3}')
-# VERSION='6.0-rc7'
+# VERSION='6.0'
+# VERSION=$(grep 'Kernel Configuration' < config | awk '{print $3}')
 
 
 # add deb-src to sources.list
@@ -18,11 +19,6 @@ cd "${GITHUB_WORKSPACE}" || exit
 # download kernel source
 wget http://www.kernel.org/pub/linux/kernel/v5.x/linux-"$VERSION".tar.xz
 tar -xf linux-"$VERSION".tar.xz
-
-# Just for 6.X
-#wget https://git.kernel.org/torvalds/t/linux-6.0-rc7.tar.gz
-#tar -zxvf linux-6.0-rc7.tar.gz
-
 cd linux-"$VERSION" || exit
 
 # copy config file
