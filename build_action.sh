@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
-VERSION=$(grep 'Kernel Configuration' < config | awk '{print $3}')
-# VERSION='6.0'
 # VERSION=$(grep 'Kernel Configuration' < config | awk '{print $3}')
+VERSION='6.0'
 
 
 # add deb-src to sources.list
@@ -17,7 +16,7 @@ sudo apt build-dep -y linux
 cd "${GITHUB_WORKSPACE}" || exit
 
 # download kernel source
-wget http://www.kernel.org/pub/linux/kernel/v5.x/linux-"$VERSION".tar.xz
+wget http://www.kernel.org/pub/linux/kernel/v6.x/linux-"$VERSION".tar.xz
 tar -xf linux-"$VERSION".tar.xz
 cd linux-"$VERSION" || exit
 
